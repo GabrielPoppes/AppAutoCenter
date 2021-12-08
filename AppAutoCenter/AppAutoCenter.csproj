@@ -54,23 +54,11 @@
     <Compile Include="View\Credenciais\Entrar.Designer.cs">
       <DependentUpon>Entrar.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Loading\FrmLoading.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\Loading\FrmLoading.Designer.cs">
-      <DependentUpon>FrmLoading.cs</DependentUpon>
-    </Compile>
     <Compile Include="View\Loading\FrmLoadingApp.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\Loading\FrmLoadingApp.Designer.cs">
       <DependentUpon>FrmLoadingApp.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\Loading\UCLoading.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="View\Loading\UCLoading.Designer.cs">
-      <DependentUpon>UCLoading.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -85,14 +73,8 @@
     <EmbeddedResource Include="View\Credenciais\Entrar.resx">
       <DependentUpon>Entrar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Loading\FrmLoading.resx">
-      <DependentUpon>FrmLoading.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="View\Loading\FrmLoadingApp.resx">
       <DependentUpon>FrmLoadingApp.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\Loading\UCLoading.resx">
-      <DependentUpon>UCLoading.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -117,6 +99,30 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\4118381_car_controller_part_steering_wheel_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AUTO CENTER.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1E2D4B.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2024644_login_user_avatar_person_users_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2024644_login_user_avatar_person_users_icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\511942_lock_login_protection_secure_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7252737_lock_security_protection_secure_shield_icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7252737_lock_security_protection_secure_shield_icon %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7252737_lock_security_protection_secure_shield_icon %281%292.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

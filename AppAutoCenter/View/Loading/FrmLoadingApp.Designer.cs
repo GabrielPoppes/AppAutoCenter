@@ -72,11 +72,12 @@ namespace AppAutoCenter.View.Loading
             this.LblAbrirApp.Cursor = System.Windows.Forms.Cursors.Hand;
             this.LblAbrirApp.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblAbrirApp.ForeColor = System.Drawing.Color.White;
-            this.LblAbrirApp.Location = new System.Drawing.Point(347, 209);
+            this.LblAbrirApp.Location = new System.Drawing.Point(345, 296);
             this.LblAbrirApp.Name = "LblAbrirApp";
             this.LblAbrirApp.Size = new System.Drawing.Size(101, 19);
             this.LblAbrirApp.TabIndex = 5;
             this.LblAbrirApp.Text = "Abrir aplicativo";
+            this.LblAbrirApp.Click += new System.EventHandler(this.LblAbrirApp_Click);
             // 
             // LblConectando
             // 
@@ -93,12 +94,13 @@ namespace AppAutoCenter.View.Loading
             // 
             this.PicCar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PicCar.Image = global::AppAutoCenter.Properties.Resources._1988884_car_front_vehicle_icon;
-            this.PicCar.Location = new System.Drawing.Point(274, 26);
+            this.PicCar.Location = new System.Drawing.Point(272, 113);
             this.PicCar.Name = "PicCar";
             this.PicCar.Size = new System.Drawing.Size(256, 256);
             this.PicCar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.PicCar.TabIndex = 4;
             this.PicCar.TabStop = false;
+            this.PicCar.Click += new System.EventHandler(this.PicCar_Click);
             // 
             // LblAutoCenter
             // 
@@ -114,7 +116,7 @@ namespace AppAutoCenter.View.Loading
             // PicAutoCenter
             // 
             this.PicAutoCenter.Image = global::AppAutoCenter.Properties.Resources._4118381_car_controller_part_steering_wheel_icon;
-            this.PicAutoCenter.Location = new System.Drawing.Point(334, 12);
+            this.PicAutoCenter.Location = new System.Drawing.Point(335, 12);
             this.PicAutoCenter.Name = "PicAutoCenter";
             this.PicAutoCenter.Size = new System.Drawing.Size(128, 128);
             this.PicAutoCenter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;

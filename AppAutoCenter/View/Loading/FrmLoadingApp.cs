@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+﻿using AppAutoCenter.View.Credenciais;
+using System;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace AppAutoCenter.View.Loading
@@ -17,15 +12,17 @@ namespace AppAutoCenter.View.Loading
             InitializeComponent();
         }
 
+        #region Evento Load da form
         private void FrmLoadingApp_Load(object sender, EventArgs e)
         {
             PanelConectando.Size = new Size(PanelConectando.Size.Width, 30);
 
         }
+        #endregion
 
+        #region Evento Timer
         int panelConectando_y = 30;
         int waiter = 0;
-
         private void TimerLoading_Tick(object sender, EventArgs e)
         {
             waiter++;
@@ -41,5 +38,24 @@ namespace AppAutoCenter.View.Loading
                 }
             }
         }
+        #endregion
+
+        #region Evento click na imagem do carro (abre a form de login)
+        private void PicCar_Click(object sender, EventArgs e)
+        {
+            Entrar frmEntrar = new Entrar();
+            frmEntrar.Show();
+            this.Hide();
+        }
+        #endregion
+
+        #region Evento click na label Abrir App (abre a form de login)
+        private void LblAbrirApp_Click(object sender, EventArgs e)
+        {
+            Entrar frmEntrar = new Entrar();
+            frmEntrar.Show();
+            this.Hide();
+        }
+        #endregion
     }
 }

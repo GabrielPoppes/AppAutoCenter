@@ -73,9 +73,89 @@ namespace AppAutoCenter.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1E2D4B {
+            get {
+                object obj = ResourceManager.GetObject("1E2D4B", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _2024644_login_user_avatar_person_users_icon {
+            get {
+                object obj = ResourceManager.GetObject("2024644_login_user_avatar_person_users_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _2024644_login_user_avatar_person_users_icon__1_ {
+            get {
+                object obj = ResourceManager.GetObject("2024644_login_user_avatar_person_users_icon (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _4118381_car_controller_part_steering_wheel_icon {
             get {
                 object obj = ResourceManager.GetObject("4118381_car_controller_part_steering_wheel_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _511942_lock_login_protection_secure_icon {
+            get {
+                object obj = ResourceManager.GetObject("511942_lock_login_protection_secure_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _7252737_lock_security_protection_secure_shield_icon__1_ {
+            get {
+                object obj = ResourceManager.GetObject("7252737_lock_security_protection_secure_shield_icon (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _7252737_lock_security_protection_secure_shield_icon__1_1 {
+            get {
+                object obj = ResourceManager.GetObject("7252737_lock_security_protection_secure_shield_icon (1)1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _7252737_lock_security_protection_secure_shield_icon__1_2 {
+            get {
+                object obj = ResourceManager.GetObject("7252737_lock_security_protection_secure_shield_icon (1)2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap AUTO_CENTER {
+            get {
+                object obj = ResourceManager.GetObject("AUTO CENTER", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
