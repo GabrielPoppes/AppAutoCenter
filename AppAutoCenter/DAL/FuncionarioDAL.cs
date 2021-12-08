@@ -1,17 +1,12 @@
 ﻿using AppAutoCenter.Models;
-using System;
-using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AppAutoCenter.DAL
 {
     class FuncionarioDAL
     {
-        public static readonly string stringConexao = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=AgenciaAuto;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+        public static readonly string stringConexao = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=AutoCenterDB;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
 
         #region Método GetFoto - Para abrir a foto, fazer a leitura, e converter para o tipo inteiro
         public byte[] GetFoto(string caminhoFoto)
@@ -28,6 +23,7 @@ namespace AppAutoCenter.DAL
         }
         #endregion
 
+        #region Método para cadastrar o funcionário no banco de dados
         public void Salvar(Funcionario funcionario)
         {
             byte[] foto = GetFoto(funcionario.CaminhoFoto);
@@ -49,5 +45,6 @@ namespace AppAutoCenter.DAL
                 }
             }
         }
+        #endregion
     }
 }

@@ -1,13 +1,7 @@
-﻿using AppAutoCenter.Models;
+﻿using AppAutoCenter.DAL;
+using AppAutoCenter.Models;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace AppAutoCenter.View.Credenciais
@@ -16,6 +10,7 @@ namespace AppAutoCenter.View.Credenciais
     {
         public string caminhoFoto = "";
         private Funcionario funcionario = new Funcionario();
+        private FuncionarioDAL funcionarioDal = new FuncionarioDAL();
         public Registrar()
         {
             InitializeComponent();
@@ -62,6 +57,14 @@ namespace AppAutoCenter.View.Credenciais
                             if (TxbSenha.Text == TxbConfirmarSenha.Text)
                             {
                                 // Passou por todas as condições - Colocar o código de registro aqui
+                                funcionario.Nome = TxbNome.Text;
+                                funcionario.Email = TxbEmail.Text;
+                                funcionario.Celular = TxbCelular.Text;
+                                funcionario.Senha = TxbSenha.Text;
+                                funcionario.CaminhoFoto = caminhoFoto;
+                                funcionarioDal.Salvar(funcionario);
+                                MessageBox.Show("Funcionário cadastrado com sucesso!");
+                                LimparCampos();
                             }
                             else
                             {
@@ -93,6 +96,19 @@ namespace AppAutoCenter.View.Credenciais
         }
         #endregion
 
+        #region Método para limpar todos os campos após a finalização do registro
+        private void LimparCampos()
+        {
+            TxbNome.Clear();
+            TxbEmail.Clear();
+            TxbCelular.Clear();
+            TxbSenha.Clear();
+            TxbConfirmarSenha.Clear();
+            lblFotoSelecionada.Hide();
+            PicFotoSelecionada.Hide();
+        }
+        #endregion
+
         #region Evento do click no botão "Selecionar foto" - onde seleciona a imagem do perfil
         private void BtnSelecionarFotoPerfil_Click(object sender, EventArgs e)
         {
@@ -107,6 +123,7 @@ namespace AppAutoCenter.View.Credenciais
             {
                 PicFotoSelecionada.Load(caminhoFoto);
                 lblFotoSelecionada.Show();
+                PicFotoSelecionada.Show();
             }
         }
         #endregion
