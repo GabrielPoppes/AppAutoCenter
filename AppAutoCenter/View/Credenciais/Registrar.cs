@@ -51,17 +51,39 @@ namespace AppAutoCenter.View.Credenciais
                 Match match = rgCelular.Match(TxbCelular.Text);
                 if (match.Success) // Checando se o celular informado é válido
                 {
+                    if(TxbNome.Text != "")
+                    {
+                        if(TxbSenha.Text != "")
+                        {
+                            if(TxbSenha.Text == TxbConfirmarSenha.Text)
+                            {
+                                // Passou por todas as condições - Colocar o código de registro aqui
+                            }
+                            else
+                            {
+                                MessageBox.Show("As senhas informadas devem ser iguais!", "Mensagem de erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Digite uma senha!", "Mensagem de erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Digite seu nome!", "Mensagem de erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("O celular digitado é inválido!");
+                    MessageBox.Show("O celular digitado é inválido!", "Mensagem de erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
 
             else
             {
-                MessageBox.Show("O e-mail digitado é inválido!");
+                MessageBox.Show("O e-mail digitado é inválido!", "Mensagem de erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }
