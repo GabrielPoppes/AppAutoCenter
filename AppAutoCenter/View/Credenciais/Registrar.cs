@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AppAutoCenter.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,9 +14,12 @@ namespace AppAutoCenter.View.Credenciais
 {
     public partial class Registrar : Form
     {
+        public string caminhoFoto = "";
+        private Funcionario funcionario = new Funcionario();
         public Registrar()
         {
             InitializeComponent();
+            lblFotoSelecionada.Hide(); // Escondendo a label "Foto selecionada" - Só aparece após selecionar uma foto
         }
 
         #region Evento click do botão voltar - Retorna para a form Entrar
@@ -51,11 +55,11 @@ namespace AppAutoCenter.View.Credenciais
                 Match match = rgCelular.Match(TxbCelular.Text);
                 if (match.Success) // Checando se o celular informado é válido
                 {
-                    if(TxbNome.Text != "")
+                    if (TxbNome.Text != "")
                     {
-                        if(TxbSenha.Text != "")
+                        if (TxbSenha.Text != "")
                         {
-                            if(TxbSenha.Text == TxbConfirmarSenha.Text)
+                            if (TxbSenha.Text == TxbConfirmarSenha.Text)
                             {
                                 // Passou por todas as condições - Colocar o código de registro aqui
                             }
@@ -86,6 +90,24 @@ namespace AppAutoCenter.View.Credenciais
                 MessageBox.Show("O e-mail digitado é inválido!", "Mensagem de erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
+        }
+        #endregion
+
+        #region Evento do click no botão "Selecionar foto" - onde seleciona a imagem do perfil
+        private void BtnSelecionarFotoPerfil_Click(object sender, EventArgs e)
+        {
+            var openFile = new OpenFileDialog();
+            openFile.Filter = "Arquivos de imagens jpg e png *.jpg | *.png";
+            openFile.Multiselect = false;
+
+            if (openFile.ShowDialog() == DialogResult.OK)
+                caminhoFoto = openFile.FileName;
+
+            if (caminhoFoto != "")
+            {
+                PicFotoSelecionada.Load(caminhoFoto);
+                lblFotoSelecionada.Show();
+            }
         }
         #endregion
     }

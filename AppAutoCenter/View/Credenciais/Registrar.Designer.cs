@@ -48,7 +48,10 @@ namespace AppAutoCenter.View.Credenciais
             this.BtnRegistrar = new System.Windows.Forms.Button();
             this.BtnVoltar = new System.Windows.Forms.Button();
             this.TxbCelular = new System.Windows.Forms.MaskedTextBox();
+            this.PicFotoSelecionada = new System.Windows.Forms.PictureBox();
+            this.lblFotoSelecionada = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.PicLogoAutoCenter)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PicFotoSelecionada)).BeginInit();
             this.SuspendLayout();
             // 
             // PicLogoAutoCenter
@@ -182,6 +185,7 @@ namespace AppAutoCenter.View.Credenciais
             this.BtnSelecionarFotoPerfil.TabIndex = 16;
             this.BtnSelecionarFotoPerfil.Text = "Selecionar foto (perfil)";
             this.BtnSelecionarFotoPerfil.UseVisualStyleBackColor = true;
+            this.BtnSelecionarFotoPerfil.Click += new System.EventHandler(this.BtnSelecionarFotoPerfil_Click);
             // 
             // panel5
             // 
@@ -254,12 +258,34 @@ namespace AppAutoCenter.View.Credenciais
             this.TxbCelular.Size = new System.Drawing.Size(248, 16);
             this.TxbCelular.TabIndex = 22;
             // 
+            // PicFotoSelecionada
+            // 
+            this.PicFotoSelecionada.Location = new System.Drawing.Point(587, 157);
+            this.PicFotoSelecionada.Name = "PicFotoSelecionada";
+            this.PicFotoSelecionada.Size = new System.Drawing.Size(104, 95);
+            this.PicFotoSelecionada.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PicFotoSelecionada.TabIndex = 23;
+            this.PicFotoSelecionada.TabStop = false;
+            // 
+            // lblFotoSelecionada
+            // 
+            this.lblFotoSelecionada.AutoSize = true;
+            this.lblFotoSelecionada.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F);
+            this.lblFotoSelecionada.ForeColor = System.Drawing.Color.White;
+            this.lblFotoSelecionada.Location = new System.Drawing.Point(584, 128);
+            this.lblFotoSelecionada.Name = "lblFotoSelecionada";
+            this.lblFotoSelecionada.Size = new System.Drawing.Size(107, 17);
+            this.lblFotoSelecionada.TabIndex = 24;
+            this.lblFotoSelecionada.Text = "Foto selecionada";
+            // 
             // Registrar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(45)))), ((int)(((byte)(75)))));
             this.ClientSize = new System.Drawing.Size(784, 411);
+            this.Controls.Add(this.lblFotoSelecionada);
+            this.Controls.Add(this.PicFotoSelecionada);
             this.Controls.Add(this.TxbCelular);
             this.Controls.Add(this.BtnVoltar);
             this.Controls.Add(this.BtnRegistrar);
@@ -284,6 +310,7 @@ namespace AppAutoCenter.View.Credenciais
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registrar";
             ((System.ComponentModel.ISupportInitialize)(this.PicLogoAutoCenter)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PicFotoSelecionada)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -310,5 +337,7 @@ namespace AppAutoCenter.View.Credenciais
         private System.Windows.Forms.Button BtnRegistrar;
         private System.Windows.Forms.Button BtnVoltar;
         private System.Windows.Forms.MaskedTextBox TxbCelular;
+        private System.Windows.Forms.PictureBox PicFotoSelecionada;
+        private System.Windows.Forms.Label lblFotoSelecionada;
     }
 }
