@@ -54,6 +54,12 @@
     <Compile Include="View\Credenciais\Entrar.Designer.cs">
       <DependentUpon>Entrar.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Credenciais\Registrar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Credenciais\Registrar.Designer.cs">
+      <DependentUpon>Registrar.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Loading\FrmLoadingApp.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,6 +78,9 @@
     </Compile>
     <EmbeddedResource Include="View\Credenciais\Entrar.resx">
       <DependentUpon>Entrar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Credenciais\Registrar.resx">
+      <DependentUpon>Registrar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Loading\FrmLoadingApp.resx">
       <DependentUpon>FrmLoadingApp.cs</DependentUpon>

@@ -39,5 +39,14 @@ namespace AppAutoCenter.View.Credenciais
             TxbSenha.PasswordChar = '*';
         }
         #endregion
+
+        #region Evento Click no botão Registrar
+        private void BtnRegistrar_Click(object sender, EventArgs e)
+        {
+            Registrar frmRegistrar = new Registrar();
+            frmRegistrar.Show();
+            this.Close();
+        }
+        #endregion
     }
 }
