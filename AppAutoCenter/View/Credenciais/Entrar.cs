@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AppAutoCenter.View.Aplicacao;
+using System;
 using System.Windows.Forms;
 
 namespace AppAutoCenter.View.Credenciais
@@ -37,6 +38,15 @@ namespace AppAutoCenter.View.Credenciais
         {
             Registrar frmRegistrar = new Registrar();
             frmRegistrar.Show();
+            this.Close();
+        }
+        #endregion
+
+        #region Evento do botão Entrar no sistema
+        private void BtnLogin_Click(object sender, EventArgs e)
+        {
+            Inicio frmInicio = new Inicio();
+            frmInicio.Show();
             this.Close();
         }
         #endregion

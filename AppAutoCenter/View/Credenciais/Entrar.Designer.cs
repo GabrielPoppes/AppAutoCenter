@@ -128,6 +128,7 @@ namespace AppAutoCenter.View.Credenciais
             this.BtnLogin.TabIndex = 7;
             this.BtnLogin.Text = "ENTRAR";
             this.BtnLogin.UseVisualStyleBackColor = false;
+            this.BtnLogin.Click += new System.EventHandler(this.BtnLogin_Click);
             // 
             // BtnRegistrar
             // 
